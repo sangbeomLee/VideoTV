@@ -27,68 +27,48 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 import UIKit
 import AVFoundation
 
-class VideoLooperView: UIView {
-    let clips: [VideoClip]
+class VideoPreView: UIView {
+    @objc var player: AVPlayer?
     let videoPlayerView = VideoPlayerView()
-    @objc private let player = AVQueuePlayer()
-    // 토큰만들기.
-    private var token: NSKeyValueObservation?
-    
-    // add
-    init(clips: [VideoClip]) {
-        self.clips = clips
-        super.init(frame: .zero)
-        initializePlayer()
+    private var isPlaying = false
+    // init
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         // gestrue추가
-        addLooperViewTapGestureRecognizers()
+        addPreViewTapGestureRecognizers()
+        print("initializePlayer: override init")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        addPreViewTapGestureRecognizers()
+        //이 부분을 해야 올라간다.
+        // 뷰를 올리는 부분
+        addSubview(videoPlayerView)
+        // 이부분이 뭔지 알아야 겠다.
         
-        print("initializePlayer")
+        videoPlayerView.frame = bounds
+        print("initializePlayer: required init")
     }
     
-    private func initializePlayer() {
-        videoPlayerView.player = player
-        addAllVideosToPlayer()
-        player.volume = 0.0
-        //videoPlayerView.player?.play()
-    
-        // player에 아이템이 1이 되면 addAllVideosToPlayer를 한다.
-        token = player.observe(\.currentItem) { [weak self] player, _ in
-          if player.items().count == 1 {
-            self?.addAllVideosToPlayer()
-          }
-        }
-    }
-    
-  
-    private func addAllVideosToPlayer() {
-      for video in clips {
+    func setVideoToPlayer(video: Video) {
         let asset = AVURLAsset(url: video.url)
         let item = AVPlayerItem(asset: asset)
-
-        player.insert(item, after: player.items().last)
-      }
+        player = AVPlayer(playerItem: item)
+        player!.volume = 0.0
+        videoPlayerView.player = player
+        videoPlayerView.isHidden = false
+        print("setVideoToPlayer : \(video.url)")
+        player!.play()
     }
     // MARK - Unnecessary but necessary Code
-  
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-  }
-    
-    func LooperViewPause(){
-        player.pause()
-    }
-    
-    func LooperViewStart(){
-        player.play()
-    }
-    
-    func addLooperViewTapGestureRecognizers(){
-        let tap = UITapGestureRecognizer(target: self, action: #selector(VideoLooperView.wasTapped))
-        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(VideoLooperView.wasDoubleTapped))
+
+    func addPreViewTapGestureRecognizers(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(VideoPreView.wasTapped))
+        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(VideoPreView.wasDoubleTapped))
         //doubleTap.numberOfTouches = 2
         doubleTap.numberOfTapsRequired = 2
         
@@ -100,12 +80,19 @@ class VideoLooperView: UIView {
         addGestureRecognizer(doubleTap)
     }
     
+    // 나오고 들어가고 정해야겠다.
     @objc func wasTapped(){
-        player.volume = player.volume == 1.0 ? 0.0 : 1.0
+        if isPlaying{
+            player!.pause()
+        }else{
+            player!.play()
+        }
+        isPlaying = !isPlaying
+        //player.volume = player.volume == 1.0 ? 0.0 : 1.0
     }
     
     @objc func wasDoubleTapped(){
-        player.rate = player.rate == 1.0 ? 2.0 : 1.0
+        player!.rate = player!.rate == 1.0 ? 2.0 : 1.0
     }
 }
 

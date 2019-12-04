@@ -27,29 +27,6 @@ class Video: NSObject {
         
         super.init()
     }
-    
-//    class func localVideos() -> [Video]{
-//        var videos: [Video] = []
-//        let names = ["newYorkFlip", "bulletTrain", "monkey", "shark"]
-//        let titles = ["New York Flip", "Bullet Train Adventure", "Monkey Village", "Robot Battles"]
-//        let subtitles = ["Can this guys really flip all of his bros? You'll never believe what happens!",
-//                         "Enjoying the soothing view of passing towns in Japan",
-//                         "Watch as a roving gang of monkeys terrorizes the top of this mountain!",
-//                         "Have you ever seen a robot shark try to eat another robot?"]
-//        // enumerated() 를 쓰면 인덱스와 값 두개를 동시에 가져올 수 있다.
-//        for (index, name) in names.enumerated(){
-//            let urlPath = Bundle.main.path(forResource: name, ofType: "mp4")!
-//            let url = URL(fileURLWithPath: urlPath)
-//            let thumbURLPath = Bundle.main.path(forResource: name, ofType: "png")!
-//            let thumbURL = URL(fileURLWithPath: thumbURLPath)
-//
-//            let video = Video(url: url, thumbURL: thumbURL, title: titles[index], subtitle: subtitles[index])
-//
-//            videos.append(video)
-//        }
-//        return videos
-//    }
-
     // 모든 비디오 파일 가져온다.
     class func fetchVideos() -> [Video]{
         var videos: [Video] = []

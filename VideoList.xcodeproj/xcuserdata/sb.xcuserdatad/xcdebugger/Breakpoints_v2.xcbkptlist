@@ -7,109 +7,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BF5FEEDD-D31A-4F86-B368-E611571F896A"
+            uuid = "E683236E-4048-4F24-A8D8-975979E54627"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VideoList/Views/VideoPreView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "setVideoToPlayer(video:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE7AB22B-7770-4474-AFA4-BD026D4426F3"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VideoList/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "ViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "BF5FEEDD-D31A-4F86-B368-E611571F896A - 5985ae11f46a57ee"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VideoList.ViewController.videoTableView.getter : Swift.Optional&lt;__C.UITableView&gt;"
-                  moduleName = "VideoList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sb/Documents/myProject/VideoList/VideoList/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "88">
-               </Location>
-               <Location
-                  uuid = "BF5FEEDD-D31A-4F86-B368-E611571F896A - a6e63e97593063da"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VideoList.ViewController.videoTableView.setter : Swift.Optional&lt;__C.UITableView&gt;"
-                  moduleName = "VideoList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sb/Documents/myProject/VideoList/VideoList/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "104">
-               </Location>
-               <Location
-                  uuid = "BF5FEEDD-D31A-4F86-B368-E611571F896A - 44336089e031bceb"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VideoList.ViewController.videoTableView.modify : Swift.Optional&lt;__C.UITableView&gt;"
-                  moduleName = "VideoList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sb/Documents/myProject/VideoList/VideoList/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "67">
-               </Location>
-               <Location
-                  uuid = "BF5FEEDD-D31A-4F86-B368-E611571F896A - d0860c6b2323c080"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VideoList.ViewController.videoTableView.modify : Swift.Optional&lt;__C.UITableView&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "VideoList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sb/Documents/myProject/VideoList/VideoList/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  uuid = "BF5FEEDD-D31A-4F86-B368-E611571F896A - 917720ce38388ce6"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VideoList.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; VideoList.ViewController"
-                  moduleName = "VideoList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sb/Documents/myProject/VideoList/VideoList/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "322">
-               </Location>
-               <Location
-                  uuid = "BF5FEEDD-D31A-4F86-B368-E611571F896A - d816097bae0dfca2"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VideoList.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;VideoList.ViewController&gt;"
-                  moduleName = "VideoList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sb/Documents/myProject/VideoList/VideoList/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "241">
-               </Location>
-            </Locations>
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
