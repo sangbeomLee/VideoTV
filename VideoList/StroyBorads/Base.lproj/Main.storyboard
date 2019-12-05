@@ -20,10 +20,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="videoCell" id="zOq-Yj-Rjp" customClass="VideoTableViewCell" customModule="VideoList" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="306"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="327"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zOq-Yj-Rjp" id="HcP-ZY-9Fa">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="306"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="327"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evI-iq-faZ" customClass="UIImageView">
@@ -34,17 +34,17 @@
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmN-KF-OBP">
-                                                    <rect key="frame" x="20" y="231.5" width="64" height="64.5"/>
+                                                    <rect key="frame" x="20" y="231.5" width="85" height="85.5"/>
                                                     <state key="normal" image="previewIcon2"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keY-s5-1FL">
-                                                    <rect key="frame" x="352" y="233.5" width="42" height="62.5"/>
+                                                    <rect key="frame" x="352" y="233.5" width="42" height="83.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjX-Bh-anv">
-                                                    <rect key="frame" x="104" y="231.5" width="561.5" height="64.5"/>
+                                                    <rect key="frame" x="125" y="231.5" width="750.5" height="85.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
