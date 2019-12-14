@@ -20,6 +20,7 @@
 		326B8C972398C1AB0052557B /* video-player-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 326B8C962398C1AB0052557B /* video-player-2.png */; };
 		326BB09923976EC600039775 /* icons8-preview-pane-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 326BB09823976EC600039775 /* icons8-preview-pane-64.png */; };
 		326BB09B2397725F00039775 /* video-editing.png in Resources */ = {isa = PBXBuildFile; fileRef = 326BB09A2397725F00039775 /* video-editing.png */; };
+		D30F1EDA23A4D894000B7725 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = D30F1ED923A4D894000B7725 /* search.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		326B8C962398C1AB0052557B /* video-player-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video-player-2.png"; sourceTree = "<group>"; };
 		326BB09823976EC600039775 /* icons8-preview-pane-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-preview-pane-64.png"; sourceTree = "<group>"; };
 		326BB09A2397725F00039775 /* video-editing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video-editing.png"; sourceTree = "<group>"; };
+		D30F1ED923A4D894000B7725 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				326B8C962398C1AB0052557B /* video-player-2.png */,
 				326BB09A2397725F00039775 /* video-editing.png */,
 				326BB09823976EC600039775 /* icons8-preview-pane-64.png */,
+				D30F1ED923A4D894000B7725 /* search.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				326BB09B2397725F00039775 /* video-editing.png in Resources */,
 				326BB09923976EC600039775 /* icons8-preview-pane-64.png in Resources */,
 				3230B4B32390DE7B001DAA38 /* LaunchScreen.storyboard in Resources */,
+				D30F1EDA23A4D894000B7725 /* search.png in Resources */,
 				326B8C972398C1AB0052557B /* video-player-2.png in Resources */,
 				3230B4B02390DE7B001DAA38 /* Assets.xcassets in Resources */,
 				3230B4AE2390DE7A001DAA38 /* Main.storyboard in Resources */,
