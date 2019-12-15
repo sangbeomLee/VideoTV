@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("viewWillAppear")
+        videoTableView.reloadData()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +35,12 @@ class ViewController: UIViewController {
         
         let searchC = UISearchController(searchResultsController: nil)
         self.navigationItem.searchController = searchC
+        searchC.searchBar.placeholder = "Search your video"
         searchC.searchResultsUpdater = self
+        searchC.searchBar.delegate = self
         searchC.searchBar.returnKeyType = .search
         self.navigationItem.hidesSearchBarWhenScrolling = true
+        
         
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -190,4 +194,25 @@ extension ViewController: UISearchResultsUpdating{
     }
     
     
+}
+
+// push search
+extension ViewController: UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("searchButtonClicked")
+        let video = filteredVideos[0]
+        let videoURL = video.url
+        let player = AVPlayer(url: videoURL)
+        
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        // 틀기전에 멈춘다. preView는
+        if videoPreView.isHidden == false{
+            videoPreView.videoPlayerView.player!.pause()
+        }
+        videoPreView.isHidden = true
+        present(playerViewController, animated: true, completion: {
+            playerViewController.player?.play()
+        })
+    }
 }
