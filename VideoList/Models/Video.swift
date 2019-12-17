@@ -9,7 +9,7 @@
 import UIKit
 // 동영상 파일을 가져오기 위해서 사용한다.
 // 파일을 가지고 오기전에 사용자에게 명시적으로 알려주어야 하기때문에 info에 가서 privarcy photolibrary설정해주여야한다.
-import AVKit
+//import AVKit
 import Photos
 
 class Video: NSObject {
@@ -33,13 +33,14 @@ class Video: NSObject {
         var resultVideos: PHFetchResult<PHAsset>?
         
         resultVideos = PHAsset.fetchAssets(with: .video, options: nil)
+        print(resultVideos!.count)
         // allvideos 의 개수만큼 저장을 위해 사용한다.
         let videoCount = resultVideos?.count ?? 0
         for index in 0..<videoCount{
             guard let asset = resultVideos?.object(at: index) else{
                 return videos
             }
-
+            
             let avURL = getVideoUrlFromPHAsset(asset)
             //  캡쳐화면으로 바꿨다.
             let previewImage:UIImage = videoSnapshot(videoAsset: avURL)!

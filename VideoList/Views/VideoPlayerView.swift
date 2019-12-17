@@ -51,7 +51,9 @@ class VideoPlayerView: UIView {
     
     // 6 Add accessor for playerLayer so you don't need to
     var playerLayer: AVPlayerLayer {
-      return layer as! AVPlayerLayer
+        get{
+            return layer as! AVPlayerLayer
+        }
     }
 }
 

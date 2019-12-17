@@ -41,12 +41,24 @@ class ViewController: UIViewController {
         searchC.searchBar.returnKeyType = .search
         self.navigationItem.hidesSearchBarWhenScrolling = true
         
+//        //keyboard will Apper
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//
         
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("viewWillDisappear")
     }
+    // preview가 있을 때 keyboard와 같이 올려주어야 한다.
+    // 실패.. keyboard가 더 위에 있는듯 하다.
+//    @objc func keyboardWillShow(_ sender: Notification) {
+//        // preview가 있다면.
+//        if !videoPreView.isHidden{
+//            videoPreView.frame.origin.y = -150
+//        }
+//    }
+
 }
 
 
@@ -69,7 +81,8 @@ extension ViewController: UITableViewDataSource{
         
     }
     
-    // 이 부분을 줄일 필요가있다.
+    // 이 부분을 줄일 필요가있다. -> 요 부분이 힘들었다고 말하고 어떻게 해결 해 나아 갔는지 얘기하자.
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 만든 VideoTableViewCell로 캐스팅 해준다.
         let videoCell = tableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath) as! VideoTableViewCell
