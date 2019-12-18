@@ -64,5 +64,9 @@
 	<string>미디어 파일을 사용하겠습니다. </string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>사진 파일을 사용하겠습니다.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NanumBarunGothic.ttf</string>
+	</array>
 </dict>
 </plist>
